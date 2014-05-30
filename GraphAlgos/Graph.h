@@ -22,7 +22,4 @@ struct graph{
 typedef struct graph * graphPtr;
 typedef struct graph Graph;
 
-inline void err_exit(char *msg){
-  printf("[Fatal Error]:%s \nExiting....\n",msg);
-  exit(1);
-}
+
