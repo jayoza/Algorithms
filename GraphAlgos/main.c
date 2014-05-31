@@ -26,11 +26,13 @@ int main(int argc, char *argv[]){
   printf("[SECOND STEP] : Adding Edges ...\n");
   read(fp, graph);
  
-  /* computing connectivity of two nodes*/
+  //computing connectivity of two nodes
   if(bfs(graph, src-1, dest-1)>0){
     printf("YES nodes %d and %d are connected\n",src, dest);
   }
   else printf("NO nodes %d and %d are not connected\n", src, dest);
+  
+  //printf("Connectivity : %d\n",connectivity(graph));
   
   /*freeing the memory allocated to the graph*/
   destroyGraph(graph);
