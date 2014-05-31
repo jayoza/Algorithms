@@ -27,10 +27,10 @@ int main(int argc, char *argv[]){
   read(fp, graph);
  
   /* computing connectivity of two nodes*/
-  if((output=bfs(graph, src-1, dest-1))>0){
+  if(bfs(graph, src-1, dest-1)>0){
     printf("YES nodes %d and %d are connected\n",src, dest);
   }
-  else if(output==0) printf("NO nodes %d and %d are not connected\n", src, dest);
+  else printf("NO nodes %d and %d are not connected\n", src, dest);
   
   /*freeing the memory allocated to the graph*/
   destroyGraph(graph);
