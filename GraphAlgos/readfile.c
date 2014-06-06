@@ -1,14 +1,15 @@
 #include<stdio.h>
 #include "Graph.h"
 
-void read(FILE *fp, graphPtr graph){
+void readGraph(FILE *fp, graphPtr graph){
   char c=getc(fp);
   int src, dest, i;
 
-  for(i=0; i<graph->num_vertices; i++){
+  // for(i=0; i<graph->num_vertices; i++){
+  do{  
     src=0;
     while(c<48 || c>57) c=getc(fp);
-
+    
     while(c>=48 && c<=57){
       src=(src<<3)+(src<<1)+c-48;
       c=getc(fp);
@@ -31,6 +32,6 @@ void read(FILE *fp, graphPtr graph){
  
       addEdge(graph, src-1, dest-1); 
     }
-  }
+  }while((c=getc(fp))!=EOF);
 }  
     

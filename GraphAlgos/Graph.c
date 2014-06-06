@@ -74,5 +74,4 @@ void displayGraph(graphPtr g){
     }
     printf("NULL\n");
   }
-}
-    
+}   
