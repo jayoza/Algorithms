@@ -8,7 +8,7 @@ using namespace std;
 bool *explored;
 vector<int> *v;
 
-bool dfs(int, int);
+void dfs(int, int);
 
 int main(){
   int n, m, src, dest;
@@ -34,7 +34,7 @@ int main(){
   return 0;
 }
   
-bool dfs(int src, int dest){
+void dfs(int src, int dest){
   for(int i=0; i<v[src-1].size(); i++){
     int ncurr=v[src-1][i];
    
