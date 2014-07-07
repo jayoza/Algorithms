@@ -14,8 +14,8 @@ int main(){
   int n, m, src, dest;
   cin>>n; cin>>m;
 
-  v=(vector<int> *)malloc(sizeof(vector<int>)*n);
-  explored=(bool *)malloc(sizeof(int)*n);
+  v=new vector<int> [n];
+  explored=new bool [n];
   
   memset(explored, false, sizeof(explored));
   
@@ -29,7 +29,8 @@ int main(){
   explored[src-1]= true;
 
   dfs(src, dest);
-  cout<<explored[dest-1]<<"\n";
+  if(explored[dest-1]) cout<<"Yes they are connected \n";
+  else cout<<"No they are not connectes\n";
 
   return 0;
 }

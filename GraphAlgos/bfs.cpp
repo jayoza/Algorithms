@@ -2,7 +2,6 @@
 #include<queue>
 #include<vector>
 #include<cstring>
-#include<cstdlib>
 
 using namespace std;
 bool * explored;
@@ -15,8 +14,8 @@ int main(){
   /*n=no. of vertices , m=no. of edges */
   cin>>n; cin>>m;
   
-  v=(vector<int> *)malloc(sizeof(vector<int>)*n);
-  explored=(bool*)malloc(sizeof(bool)*n);
+  v=new vector<int> [n];
+  explored=new bool [n];
   
   /*declare a queue datastructure for bfs */
   queue<int> q;
